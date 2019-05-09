@@ -1,0 +1,8 @@
+<%if @content[/youtu\.be\/([^\?]*)/] %>
+  <% video_id = $1 %>
+<% else %>
+  <% @content[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/] %>
+  <% video_id = $5 %>
+<% end %>
+
+<iframe src="https://www.youtube.com/embed/<%= video_id %>" frameborder="0" allowfullscreen>

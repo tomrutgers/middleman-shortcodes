@@ -51,7 +51,7 @@ $shortcode = Shortcode.new
 
 $shortcode.setup do |config|
   config.template_path = 'source/shortcodes'
-  config.block_tags = [:quote]
+  config.block_tags = [:quote, :youtube]
 end
 
 helpers do
